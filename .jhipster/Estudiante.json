@@ -1,0 +1,72 @@
+{
+  "applications": ["SimuSaber3y5"],
+  "changelogDate": "20220506001741",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "estudiante",
+  "fields": [
+    {
+      "fieldName": "grado",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "fieldName": "colegio",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    },
+    {
+      "fieldName": "fechaNacimiento",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "ciudad",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "256"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Estudiante",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "estudiante",
+      "ownerSide": true,
+      "relationshipName": "user",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "prueba",
+      "otherEntityRelationshipName": "estudiante",
+      "relationshipName": "prueba",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "pruebaApoyo",
+      "otherEntityRelationshipName": "estudiante",
+      "relationshipName": "pruebaApoyo",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "sala",
+      "otherEntityRelationshipName": "estudiante",
+      "ownerSide": true,
+      "relationshipName": "sala",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "estudianteSala",
+      "otherEntityRelationshipName": "estudiante",
+      "relationshipName": "estudianteSala",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
